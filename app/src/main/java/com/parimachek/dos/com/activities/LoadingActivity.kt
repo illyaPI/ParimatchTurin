@@ -1,6 +1,8 @@
 package com.parimachek.dos.com.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.lifecycleScope
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.parimachek.dos.com.application.WebViewApplication
@@ -27,6 +29,19 @@ class LoadingActivity : ViewBindingActivity<ActivityLoadingBinding>(ActivityLoad
   private fun setupFirebase() {
     val firebaseConfig = FirebaseRemoteConfig.getInstance()
     firebaseConfig.fetchAndActivate().addOnCompleteListener(this) {
+      val whiteBase = firebaseConfig.getString(WHITE_BASE)
+      val blackBase = firebaseConfig.getString(BLACK_BASE).ifEmpty { null }
+      val defaultKey = firebaseConfig.getString(DEFAULT_KEY)
+
+      repository.whiteBase = whiteBase
+      repository.blackBase = blackBase
+      repository.defaultKey = defaultKey
+
+      Log.i(TAG, "setupFirebase: whiteBase: $whiteBase")
+      Log.i(TAG, "setupFirebase: blackBase: $blackBase")
+      Log.i(TAG, "setupFirebase: defaultKey: $defaultKey")
+
+      startActivity(Intent(this, WebViewActivity::class.java))
     }
   }
 

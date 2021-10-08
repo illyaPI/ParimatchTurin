@@ -25,8 +25,8 @@ class WebViewApplication : Application() {
 
   lateinit var appComponent: AppComponent
   @Inject lateinit var repository: Repository
-  private lateinit var googleAdvertisingId: String
-  private lateinit var appsFlyerId: String
+  lateinit var googleAdvertisingId: String
+  lateinit var appsFlyerId: String
 
   override fun onCreate() {
     super.onCreate()
@@ -83,12 +83,12 @@ class WebViewApplication : Application() {
           }
           else -> {
             Log.e(TAG, "onConversionDataSuccess: unexpected value of afStatus: $afStatus")
-            return
+            null
           }
         }
         repository.binomLink = binomLink
 
-        dataMap.forEach { Log.i(TAG, "onConversionDataSuccess: attribute: ${it.key}: ${it.value}") }
+        dataMap?.forEach { Log.i(TAG, "onConversionDataSuccess: attribute: ${it.key}: ${it.value}") }
         Log.i(TAG, "onConversionDataSuccess: binomLink: $binomLink")
       }
     }

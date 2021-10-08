@@ -39,6 +39,11 @@
             android:name=".activities.WebViewActivity"
             android:exported="true" />
 
+        <service
+            android:name=".services.InternetCheckerService"
+            android:enabled="true"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5029981261557761~6312766385" />
