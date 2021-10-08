@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "722167819306",
+    "project_id": "comparimachekdoscom",
+    "storage_bucket": "comparimachekdoscom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722167819306:android:7129b09377d0a7fbd02753",
+        "android_client_info": {
+          "package_name": "com.parimachek.dos.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722167819306-qjj6m0l5ksmvsfraqfr6lgkul4oalcen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV8zzM0QsmYgVeVP4AZYiqm26m54bi56A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722167819306-qjj6m0l5ksmvsfraqfr6lgkul4oalcen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
