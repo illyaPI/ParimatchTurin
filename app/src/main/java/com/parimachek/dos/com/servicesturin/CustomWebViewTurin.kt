@@ -1,4 +1,4 @@
-package com.parimachek.dos.com.webview
+package com.parimachek.dos.com.servicesturin
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,7 +6,7 @@ import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
 
-class CustomWebView(context: Context, attrs: AttributeSet) : WebView(context, attrs) {
+class CustomWebViewTurin(context: Context, attrs: AttributeSet) : WebView(context, attrs) {
 
   init {
     scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
@@ -22,10 +22,5 @@ class CustomWebView(context: Context, attrs: AttributeSet) : WebView(context, at
       displayZoomControls = false
       builtInZoomControls = true
     }
-  }
-
-  companion object {
-
-    private const val TAG: String = "CustomWebView"
   }
 }

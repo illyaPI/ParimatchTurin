@@ -16,7 +16,7 @@
     </queries>
 
     <application
-        android:name=".application.WebViewApplication"
+        android:name="com.parimachek.dos.com.importantturin.applicationturin.WebViewApplicationTurin"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,7 +26,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".activities.LoadingActivity"
+            android:name="com.parimachek.dos.com.repositoryturin.activitiesturin.LoadingActivityTurin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,11 +36,12 @@
         </activity>
 
         <activity
-            android:name=".activities.WebViewActivity"
+            android:name="com.parimachek.dos.com.repositoryturin.activitiesturin.WebViewActivityTurin"
+            android:configChanges="keyboardHidden|screenLayout|orientation|keyboard|screenSize"
             android:exported="true" />
 
         <service
-            android:name=".services.InternetCheckerService"
+            android:name=".servicesturin.InternetCheckerServiceTurin"
             android:enabled="true"
             android:exported="false" />
 
@@ -63,7 +64,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/external" />
+                android:resource="@xml/external_turin" />
         </provider>
     </application>
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Parimatch</string>
+    <string name="no_internet">Your internet is not working, please wait for it…</string>
 </resources>
